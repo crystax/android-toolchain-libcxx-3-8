@@ -11,6 +11,8 @@
 #if defined(__APPLE__) || defined(LIBCXXRT) ||                                 \
     defined(LIBCXX_BUILDING_LIBCXXABI)
 #include <cxxabi.h>
+#elif defined(__ANDROID__)
+#include <cxxabi.h>
 #endif
 
 #include "typeinfo"

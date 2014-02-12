@@ -16,6 +16,8 @@
 /* For _LIBCPPABI_VERSION */
 #if defined(LIBCXX_BUILDING_LIBCXXABI) || defined(__APPLE__) || defined(LIBCXXRT)
 #include <cxxabi.h>
+#elif defined(__ANDROID__)
+#include <cxxabi.h>
 #endif
 
 static_assert(sizeof(std::__libcpp_refstring) == sizeof(const char *), "");
